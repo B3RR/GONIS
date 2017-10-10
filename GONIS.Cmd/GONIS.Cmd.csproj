@@ -6,6 +6,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\GONIS\GONIS.Core.csproj" />
+    <ProjectReference Include="..\GONIS.Core\GONIS.Core.csproj" />
   </ItemGroup>
 </Project>

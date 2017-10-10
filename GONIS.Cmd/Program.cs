@@ -1,4 +1,5 @@
 ﻿using System;
+using GONIS.Core.Helper;
 
 namespace GONIS.Cmd
 {
@@ -10,15 +11,11 @@ namespace GONIS.Cmd
         /// <param name="args">The command-line arguments.</param>
         static void Main(string[] args)
         {
-            Console.WriteLine(Core.Helper.ConsoleHelper.ReadLine());
-            if (Core.Helper.ConsoleHelper.ReadYesOrNo())
-            {
-                Console.WriteLine("да"); 
-            }
-            else
-            {
-                Console.WriteLine("нет");
-            }
+            
+            ConsoleHelper.WriteUnderLine();
+            ConsoleHelper.WriteTextOnMiddle("Привет");
+            Console.ReadKey();
+            ConsoleHelper.WriteTextOnMiddle("Привет");
 
         }
     }
