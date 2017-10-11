@@ -1,5 +1,7 @@
 ﻿using System;
 using GONIS.Core.Helper;
+using System.Data.SqlClient;
+using System.Data;
 
 namespace GONIS.Cmd
 {
@@ -11,12 +13,7 @@ namespace GONIS.Cmd
         /// <param name="args">The command-line arguments.</param>
         static void Main(string[] args)
         {
-            
-            ConsoleHelper.WriteUnderLine();
-            ConsoleHelper.WriteTextOnMiddle("Привет");
-            Console.ReadKey();
-            ConsoleHelper.WriteTextOnMiddle("Привет");
-
+           var dt=MSSqlAdoNetHelper.GetDataTableFromQuery("select 100","");
         }
     }
 }
