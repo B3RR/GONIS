@@ -17,16 +17,25 @@ namespace GONIS.Core.Helper
         /// <param name="timeout">Timeout.</param>
         private static DataTable GetDataTable(SqlCommand cmd, SqlConnection con, int timeout)
         {
-            con.Open();
-            using (SqlDataAdapter da = new SqlDataAdapter())
+            if (con != null)
             {
-                cmd.Connection = con;
-                da.SelectCommand = cmd;
-                da.SelectCommand.CommandTimeout = timeout * 1000;
-                var ds = new DataSet();
-                da.Fill(ds);
-                return ds.Tables[0];
+                if (cmd != null)
+                {
+                    con.Open();
+                    using (SqlDataAdapter da = new SqlDataAdapter())
+                    {
+                        cmd.Connection = con;
+                        da.SelectCommand = cmd;
+                        da.SelectCommand.CommandTimeout = timeout * 1000;
+                        var ds = new DataSet();
+                        da.Fill(ds);
+                        cmd.Dispose();
+                        return ds.Tables[0];
+                    }
+                }
+                else throw new NullReferenceException("SqlCommand is null");
             }
+            else throw new NullReferenceException("SQLConnection is null");
 
         }
         /// <summary>

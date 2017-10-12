@@ -9,7 +9,7 @@ namespace GONIS.Core.Helper
         /// <returns>The line.</returns>
         public static string ReadLine()
         {
-            Console.Write($"{Environment.NewLine}Input text:");
+            Console.Write("Input text:");
             return Console.ReadLine().Trim();
         }
         /// <summary>
@@ -18,7 +18,7 @@ namespace GONIS.Core.Helper
         /// <returns><c>true</c>, if "yes" or "y", <c>false</c> if "no" or "n".</returns>
         public static bool ReadYesOrNo()
         {
-            Console.Write($"{Environment.NewLine}Input 'n' or 'y':");
+            Console.Write("Input 'n' or 'y':");
             var value = Console.ReadLine().ToLower();
             if (value.Equals("y")||value.Equals("yes"))
             {
