@@ -17,16 +17,9 @@ namespace GONIS.Core.Helper.EntityFramework
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-
-            var roles = new FluentAPI.Security.Roles();
-            roles.OnModelCreating(modelBuilder);
-
-            var users = new FluentAPI.Security.Users();
-            users.OnModelCreating(modelBuilder);
-
-            var rolesUsers = new FluentAPI.Security.RolesUsers();
-            rolesUsers.OnModelCreating(modelBuilder);
-
+            var roles = new FluentAPI.Security.Roles(modelBuilder);
+            var users = new FluentAPI.Security.Users(modelBuilder);
+            var rolesUsers = new FluentAPI.Security.RolesUsers(modelBuilder);
         }
     }
 }

@@ -6,11 +6,11 @@ using Microsoft.EntityFrameworkCore;
 
 namespace GONIS.Core.Helper.EntityFramework.FluentAPI.Security
 {
-    public class RolesUsers : IFluentAPI
+    public class RolesUsers 
     {
-        public void OnModelCreating(ModelBuilder modelBuilder)
+        public RolesUsers(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Model.Security.RolesUsers>() 
+            modelBuilder.Entity<Model.Security.RolesUsers>()
              .HasIndex(p => new { p.RoleId, p.UserId })
              .IsUnique(true);
         }

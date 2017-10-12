@@ -7,9 +7,9 @@ using System.Text;
 
 namespace GONIS.Core.Helper.EntityFramework.FluentAPI.Security
 {
-    public class Users: IFluentAPI
+    public class Users
     {
-        public void OnModelCreating(ModelBuilder modelBuilder)
+        public Users(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<User>().HasKey(x => x.Id);
             modelBuilder.Entity<User>().HasIndex(x => x.Login).IsUnique();
