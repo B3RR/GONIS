@@ -15,9 +15,7 @@ namespace GONIS.Core.Interface.EntityFramework
         void Update(TEntity entity);
         void Delete(int id);
         void Delete(TEntity entity);
-        
         void DeleteFromDB(TEntity entity);
-
         void DeleteFromDB(int id);
 
     }

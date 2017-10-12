@@ -21,7 +21,9 @@ namespace GONIS.Core.Helper.EntityFramework
         public void Add(TEntity entity)
         {
             if (entity == null)
+            {
                 throw new ArgumentNullException("entity");
+            }
 
             using (var context = Create())
             {
@@ -53,7 +55,9 @@ namespace GONIS.Core.Helper.EntityFramework
         public TEntity GetById(int id)
         {
             if (id <= 0)
+            {
                 throw new ArgumentOutOfRangeException("id");
+            }
 
             using (var context = Create())
             {
@@ -69,10 +73,14 @@ namespace GONIS.Core.Helper.EntityFramework
         public void Update(TEntity entity)
         {
             if (entity == null)
+            {
                 throw new ArgumentNullException("entity");
+            }
 
             if (entity.Id < 1)
+            {
                 throw new ArgumentOutOfRangeException("id < 1");
+            }
 
             using (var context = Create())
             {
@@ -88,22 +96,28 @@ namespace GONIS.Core.Helper.EntityFramework
 
         public void Delete(TEntity entity)
         {
-            entity.IsDel = true;
+            if (entity == null)
+            {
+                throw new InvalidOperationException($"entity");
+            }
             Update(entity);
         }
 
         public void Delete(int id)
         {
             if (id < 1)
+            {
                 throw new ArgumentOutOfRangeException("id < 1");
+            }
 
             using (var context = Create())
             {
                 var removeentity = context.Find<TEntity>(id);
-
                 if (removeentity == null)
+                {
                     throw new InvalidOperationException($"entity with id = [{id}], not found");
-                DeleteFromDB(removeentity);
+                }
+                Delete(removeentity);
             }
         }
 
@@ -111,19 +125,18 @@ namespace GONIS.Core.Helper.EntityFramework
         public void DeleteFromDB(TEntity entity)
         {
             if (entity == null)
+            {
                 throw new ArgumentNullException("entity");
-
-            if (entity.Id < 1)
-                throw new ArgumentOutOfRangeException("id < 1");
-
+            }
             DeleteFromDB(entity.Id);
         }
 
         public void DeleteFromDB(int id)
         {
             if (id < 1)
+            {
                 throw new ArgumentOutOfRangeException("id < 1");
-
+            }
             using (var context = Create())
             {
                 var removeentity = context.Find<TEntity>(id);

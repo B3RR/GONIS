@@ -26,7 +26,9 @@ namespace GONIS.Core.Helper.EntityFramework
         public void Add(TEntity entity)
         {
             if (entity == null)
+            {
                 throw new ArgumentNullException("entity");
+            }
 
             BeforeAdded?.Invoke(entity);
 
@@ -39,10 +41,14 @@ namespace GONIS.Core.Helper.EntityFramework
         public void Update(TEntity entity)
         {
             if (entity == null)
+            {
                 throw new ArgumentNullException("entity");
+            }
 
             if (entity.Id < 1)
+            {
                 throw new ArgumentOutOfRangeException("id < 1");
+            }
 
             BeforeUpdated?.Invoke(entity);
 
@@ -53,13 +59,17 @@ namespace GONIS.Core.Helper.EntityFramework
 
         public TEntity GetById(int id)
         {
-            if (id <= 0)
+            if (id < 1)
+            {
                 throw new ArgumentOutOfRangeException("id");
+            }
 
             var findEntity = _dbSet.Find(id);
 
             if (findEntity == null)
+            {
                 throw new InvalidOperationException($"Entity with id = [{id}], not found");
+            }
 
             return findEntity;
         }
@@ -77,14 +87,16 @@ namespace GONIS.Core.Helper.EntityFramework
         public void Delete(TEntity entity)
         {
             if (entity == null)
+            {
                 throw new ArgumentNullException("entity");
+            }
 
             if (entity.Id < 1)
+            {
                 throw new ArgumentOutOfRangeException("id < 1");
+            }
 
             BeforeUpdated?.Invoke(entity);
-
-            entity.WhenUpdated = DateTime.Now;
             entity.IsDel = true;
 
             _context.Entry(entity).State = EntityState.Modified;
@@ -99,10 +111,14 @@ namespace GONIS.Core.Helper.EntityFramework
         public void DeleteFromDB(TEntity entity)
         {
             if (entity == null)
+            {
                 throw new ArgumentNullException("entity");
+            }
 
             if (entity.Id < 1)
+            {
                 throw new ArgumentOutOfRangeException("id < 1");
+            }
             DeleteFromDB(entity.Id);
         }
 

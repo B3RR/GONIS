@@ -14,7 +14,6 @@ namespace GONIS.Core.Helper.EntityFramework
 
         public IRepository<Role> Roles { get; }
         public IRepository<User> Users { get; }
-
         public IRepository<RolesUsers> RolesUsers { get; }
 
         public DataContext(DbContextOptions options)
