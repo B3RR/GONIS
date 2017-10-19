@@ -12,7 +12,7 @@ namespace GONIS.Core.Helper.EntityFramework
 
         public DataBase CreateDbContext(string[] args)
         {
-            var connectionString = "";
+            var connectionString = ConfigurationHelper.GetConnectionString("Entity");
 
             var optionsBuilder = new DbContextOptionsBuilder<DataBase>();
             optionsBuilder.UseSqlServer(connectionString);
