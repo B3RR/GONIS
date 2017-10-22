@@ -18,7 +18,7 @@ namespace GONIS.Cmd
         /// <param name="args">The command-line arguments.</param>
         static void Main(string[] args)
         {
-            EntityFramework.InsertFakeData();
+            //EntityFramework.InsertFakeData();
             EntityFramework.SelectFakeData();
             Console.ReadKey();
         }
