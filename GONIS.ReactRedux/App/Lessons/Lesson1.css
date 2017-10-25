@@ -1,0 +1,39 @@
+﻿.l1-contacts {
+    width: 300px;
+    margin: 0 auto;
+}
+
+.l1-search-field {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.l1-contacts-list {
+    padding: 0;
+    width: 100%;
+}
+
+.l1-contact {
+    display: flex;
+    align-items: center;
+    font-family: sans-serif;
+    width: 100%;
+    padding: 5px;
+    border-bottom: 1px dotted grey;
+}
+
+.l1-contact-image {
+    border-radius: 50%;
+    margin: 5px;
+}
+
+.l1-contact-name {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.l1-contact-number {
+    font-size: 18px;
+    color: grey;
+}

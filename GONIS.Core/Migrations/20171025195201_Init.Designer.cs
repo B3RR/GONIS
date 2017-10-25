@@ -11,7 +11,7 @@ using System;
 namespace GONIS.Core.Migrations
 {
     [DbContext(typeof(DataBase))]
-    [Migration("20171019193304_Init")]
+    [Migration("20171025195201_Init")]
     partial class Init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
