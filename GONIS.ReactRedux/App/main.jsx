@@ -1,7 +1,14 @@
-﻿// import 'core-js/fn/object/assign'; // for IE
-// import 'core-js/fn/object/is'; // for IE 
-// import Hello from './Hello.jsx';
-// import AlfaTest from './AlfaTest.jsx';
-// document.getElementById("helloworld").innerText = "Hello world from script";
+﻿import 'core-js/fn/object/assign'; // for IE
+import 'core-js/fn/object/is'; // for IE 
 
-import ContactList from './Lessons/Lesson1.jsx';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './App.jsx';
+import { BrowserRouter } from 'react-router-dom';
+
+ReactDOM.render(
+    (<BrowserRouter>
+        <App />
+    </BrowserRouter>)
+        , document.getElementById('App')
+);

@@ -1,5 +1,4 @@
 ﻿import React from 'react';
-import ReactDOM from 'react-dom';
 import './Lesson1.css';
 
 let CONTACTS = [
@@ -30,7 +29,7 @@ let CONTACTS = [
 ]
 
 
-class ContactList extends React.Component {
+export default class ContactList extends React.Component {
 
     constructor(props) {
         super(props);
@@ -40,7 +39,7 @@ class ContactList extends React.Component {
 
     handleSearch(event) {
         let searchQuery = event.target.value.toLowerCase();
-        let displayedContacts = CONTACTS.filter(function (el) {
+        let displayedContacts = CONTACTS.filter((el) => {
             var searchValue = el.name.toLowerCase();
             return searchValue.indexOf(searchQuery) !== -1;
         });
@@ -55,7 +54,7 @@ class ContactList extends React.Component {
             <input type='text' className='l1-search-field' onChange={this.handleSearch} />
             <ul className='l1-contacts-list'>
                 {
-                    this.state.displayedContacts.map(function (el) {
+                    this.state.displayedContacts.map((el) => {
                         return <Contact key={el.id}
                             name={el.name}
                             phone={el.phone}
@@ -79,7 +78,6 @@ class Contact extends React.Component {
     }
 }
 
-ReactDOM.render(<ContactList />, document.getElementById("content"));
 
 
 
