@@ -4,6 +4,7 @@ import Home from './Lessons/HelloWorld/Home.jsx';
 import Lesson1 from './Lessons/Lesson1.jsx';
 import Lesson2 from './Lessons/Lesson2.jsx';
 import Lesson3 from './Lessons/Lesson3.jsx';
+import Lesson4 from './Lessons/Lesson4.jsx';
 
 export default class Content extends React.Component {
     render() { 
@@ -13,6 +14,7 @@ export default class Content extends React.Component {
                     <Route path='/l1' component={Lesson1} />
                     <Route path='/l2' component={Lesson2} />
                     <Route path='/l3' component={Lesson3} />
+                    <Route path='/l4' component={Lesson4} />
                 </Switch>
         );
     }

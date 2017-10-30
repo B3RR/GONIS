@@ -1,12 +1,48 @@
 ﻿import React from 'react';
-import Header from './Header.jsx';
-import Main from './Main.jsx';
 
 export default class Lesson4 extends React.Component { 
+    constructor(props) {
+        super(props);
+    }
+    
     render() {
         return (<div>
-                 <Header />
-                 <Main />
+                    <Test url='/Test/GetList' />
                 </div>);
     }
+}
+
+class Test extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = { data: [] };
+    }
+
+    componentWillMount()   {
+        let xhr = new XMLHttpRequest();
+        xhr.open('get', this.props.url, true);
+        xhr.onload = () => {
+            let data = JSON.parse(xhr.responseText);
+            this.setState({ data: data });
+        };
+        xhr.send();
+    }
+
+    componentWillUnmount() {
+        this.setState({ data: [] });
+    }
+
+    render() {
+        return (<div>
+            <ul>
+                {
+                    this.state.data.map((el) => {
+                        return <li key={el.id}>{el.id} - {el.text}</li>
+                    })
+                }
+            </ul>
+        </div>);
+
+    }
+
 }
