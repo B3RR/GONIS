@@ -8,7 +8,7 @@
 
     module.exports = {
         
-        entry: "./App/main.jsx",
+        entry: "./App/Main.jsx",
         
         output: {
             filename: 'script.js',
