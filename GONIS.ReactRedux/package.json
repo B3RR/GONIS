@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "name": "alfa-aspdotnetcore-boilerplate",
+  "name": "lessons-aspnet-react-spa",
   "private": true,
   "dependencies": {
     "arui-feather": "^10.2.1",
@@ -8,7 +8,8 @@
     "react-dom": "^16.0.0",
     "react-router": "^4.2.0",
     "react-router-dom": "^4.2.0",
-    "react-redux":"^5.0.6",
+    "react-helmet":  "^5.2.0",
+    "react-redux": "^5.0.6",
     "redux": "^3.7.2",
     "redux-thunk": "^2.2.0",
     "babel-loader": "^7.1.2",
@@ -22,6 +23,8 @@
   },
   "devDependencies": {
     "webpack": "^3.8.1",
+    "webpack-hot-middleware": "^2.20.0",
+    "react-hot-loader": "^3.1.1",
     "aspnet-webpack": "^2.0.1",
     "aspnet-webpack-react": "^3.0.0",
     "clean-webpack-plugin": "^0.1.17"

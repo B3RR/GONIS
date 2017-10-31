@@ -8,8 +8,7 @@
 
     module.exports = {
         
-        entry: "./App/Main.jsx",
-        
+        entry: { main: './App/Main.jsx' },
         output: {
             filename: 'script.js',
             path: path.resolve(__dirname, bundleFolder),

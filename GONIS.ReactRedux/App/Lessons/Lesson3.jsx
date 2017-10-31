@@ -1,5 +1,6 @@
 ﻿import React from 'react';
 import "./Lesson3.css";
+import Helmet from 'react-helmet';
 
 class Note extends React.Component {
     constructor(props) {
@@ -39,7 +40,7 @@ class NoteEditor extends React.Component {
     }
 
     render() {
-        return (<div className="l3-note-editor">
+        return (<div className="l3-note-editor"><Helmet title='Lesson 3 - Note Application' />
             <textarea className="l3-textarea" placeholder="Enter your text..."
                 rows={5}
                 value={this.state.text}

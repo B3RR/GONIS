@@ -1,4 +1,5 @@
 ﻿import React from "react";
+import Helmet from 'react-helmet';
 
 export default class Lesson2 extends React.Component {
     constructor(props) {
@@ -25,7 +26,7 @@ export default class Lesson2 extends React.Component {
 
     render() {
         return (
-            <div>{this.state.seconds} seconds</div>
+            <div><Helmet title="Lesson 2 - Timer" />{this.state.seconds} seconds</div>
             );
     }
 }

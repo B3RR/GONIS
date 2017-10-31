@@ -1,4 +1,5 @@
 ﻿import React from 'react';
+import Helmet from 'react-helmet';
 
 export default class Lesson4 extends React.Component { 
     constructor(props) {
@@ -33,7 +34,7 @@ class Test extends React.Component {
     }
 
     render() {
-        return (<div>
+        return (<div><Helmet title='Lesson 4 - Backend' />
             <ul>
                 {
                     this.state.data.map((el) => {

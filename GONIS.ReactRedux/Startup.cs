@@ -32,20 +32,18 @@ namespace GONIS.ReactRedux
             {
                 app.UseDeveloperExceptionPage();
                 app.UseBrowserLink();
-
-                //app.UseWebpackDevMiddleware(new WebpackDevMiddlewareOptions
-                //{
-                //    HotModuleReplacement = true,
-                //    ReactHotModuleReplacement = true
-                //});
+                app.UseWebpackDevMiddleware(new WebpackDevMiddlewareOptions
+                {
+                    HotModuleReplacement = true,
+                    ReactHotModuleReplacement = true,
+                    ConfigFile = @"webpack.config.js"
+                });
             }
             else
             {
                 app.UseExceptionHandler("/Home/Error");
             }
-
             app.UseStaticFiles();
-
             app.UseMvc(routes =>
             {
                 routes.MapRoute(

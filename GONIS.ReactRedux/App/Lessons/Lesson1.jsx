@@ -1,4 +1,5 @@
 ﻿import React from 'react';
+import Helmet from 'react-helmet';
 import './Lesson1.css';
 
 let CONTACTS = [
@@ -50,7 +51,7 @@ export default class ContactList extends React.Component {
     }
 
     render() {
-        return (<div className='l1-contacts'>
+        return (<div className='l1-contacts'><Helmet title="Lesson 1 - Contacts List" />
             <input type='text' className='l1-search-field' onChange={this.handleSearch} />
             <ul className='l1-contacts-list'>
                 {
