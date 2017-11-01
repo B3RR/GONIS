@@ -10,9 +10,9 @@
         
         entry: { main: './App/Main.jsx' },
         output: {
-            filename: 'script.js',
+            filename: '[name].js',
             path: path.resolve(__dirname, bundleFolder),
-            publicPath: path.resolve(__dirname, bundleFolder),
+            publicPath: '/wwwroot/bundle/',
         },
         // Babel,CSS,URL-Loader
         module: {

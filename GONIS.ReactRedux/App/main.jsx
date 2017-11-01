@@ -12,3 +12,7 @@ ReactDOM.render(
     </BrowserRouter>)
         , document.getElementById('App')
 );
+
+if (module.hot) {
+    module.hot.accept();
+}

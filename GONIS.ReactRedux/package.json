@@ -30,11 +30,6 @@
     "clean-webpack-plugin": "^0.1.17"
   },
   "scripts": {
-    "webpack-script": "webpack"
-  },
-  "-vs-binding": {
-    "BeforeBuild": [
-      "webpack-script"
-    ]
+    "webpack-build": "webpack"
   }
 }

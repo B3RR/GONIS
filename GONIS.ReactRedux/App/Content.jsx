@@ -10,11 +10,11 @@ export default class Content extends React.Component {
     render() { 
         return (
                 <Switch>
-                    <Route exact path='/' component={Home} />
-                    <Route path='/l1' component={Lesson1} />
-                    <Route path='/l2' component={Lesson2} />
-                    <Route path='/l3' component={Lesson3} />
-                    <Route path='/l4' component={Lesson4} />
+                    <Route exact path='/'  component={Home} />
+                    <Route path='/l1'  component={Lesson1} />
+                    <Route path='/l2'  component={Lesson2} />
+                    <Route path='/l3'  component={Lesson3} />
+                    <Route path='/l4'  component={Lesson4} />
                 </Switch>
         );
     }
