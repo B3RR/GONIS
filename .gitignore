@@ -289,3 +289,5 @@ __pycache__/
 *.btm.cs
 *.odx.cs
 *.xsd.cs
+/GONIS.ReactRedux/wwwroot/bundle
+/GONIS.ReactRedux/GONIS.ReactRedux.7z

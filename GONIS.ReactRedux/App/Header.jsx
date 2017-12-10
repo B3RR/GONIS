@@ -12,6 +12,7 @@ export default class Header extends React.Component{
                         <li><Link to='/l2'>Lesson 2 - Timer</Link></li>
                         <li><Link to='/l3'>Lesson 3 - Notes App</Link></li>
                         <li><Link to='/l4'>Lesson 4 - Backend</Link></li>
+                        <li><Link to='/l5'>Lesson 5 - Router</Link></li>
                     </ul>
                 </nav>
             </header>

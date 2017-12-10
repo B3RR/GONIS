@@ -1,5 +1,7 @@
 ﻿import 'core-js/fn/object/assign'; // for IE
 import 'core-js/fn/object/is'; // for IE 
+import 'core-js/fn/array/find'; // for IE 
+
 
 import React from 'react';
 import ReactDOM from 'react-dom';

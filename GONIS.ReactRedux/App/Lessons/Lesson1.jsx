@@ -6,7 +6,7 @@ let CONTACTS = [
     {
         id: 1,
         name: 'Oleg',
-        phone: '+7921652344321',
+        phone: '+79216523442',
         imageULR: 'http://zagony.ru/grabber/pic/1198063130_1.jpg'
     },
     {

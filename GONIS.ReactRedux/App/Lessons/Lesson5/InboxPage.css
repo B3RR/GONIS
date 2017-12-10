@@ -1,0 +1,13 @@
+﻿.l5-InboxPage {
+    display:flex;
+    height:100%;
+}
+
+.l5-messages {
+    flex:1;
+}
+
+.l5-message-container {
+    flex:1;
+    padding-left:10px;
+}
