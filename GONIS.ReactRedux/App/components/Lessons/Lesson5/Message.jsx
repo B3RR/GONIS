@@ -1,6 +1,6 @@
 ﻿import React from 'react';
 import Helmet from 'react-helmet';
-import messages from './messages.jsx';
+import MESSAGES from './MESSAGES.jsx';
 
 export default class Message extends React.Component {
     constructor(props) {
@@ -10,7 +10,7 @@ export default class Message extends React.Component {
 
     render() {
         const { messageId } = this.props.match.params;
-        let message = messages.find(message => message.id === messageId)
+        let message = MESSAGES.find(message => message.id === messageId)
         if (message) {
             return (<div><Helmet title={message.subject} />
                 <p>From: {message.senderName} ({message.senderEmail})</p>

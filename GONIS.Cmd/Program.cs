@@ -1,12 +1,5 @@
 ﻿using System;
-using GONIS.Core.Helper;
-using System.Data.SqlClient;
-using System.Data;
 using GONIS.Core.Helper.EntityFramework;
-using GONIS.Core.Model.Security;
-using System.Collections.Generic;
-using Microsoft.EntityFrameworkCore;
-using System.Linq;
 
 namespace GONIS.Cmd
 {
@@ -18,6 +11,7 @@ namespace GONIS.Cmd
         /// <param name="args">The command-line arguments.</param>
         static void Main(string[] args)
         {
+            
             //EntityFramework.InsertFakeData();
             EntityFramework.SelectFakeData();
             Console.ReadKey();

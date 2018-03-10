@@ -2,7 +2,7 @@
 import Helmet from 'react-helmet';
 import MessagePreview from './MessagePreview.jsx';
 import Message from './Message.jsx';
-import messages from './messages.jsx';
+import MESSAGES from './MESSAGES.jsx';
 import { Switch, Route } from 'react-router-dom';
 import './InboxPage.css';
 
@@ -10,7 +10,7 @@ export default class InboxPage extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            messages: messages,
+            messages: MESSAGES,
             pathWithoutSlash: this.props.match.url
         };
     }
