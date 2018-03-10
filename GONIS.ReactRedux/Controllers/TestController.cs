@@ -17,15 +17,23 @@ namespace GONIS.ReactRedux.Controllers
         [HttpGet]
         public JsonResult GetList()
         {
-            var test = new List<Test>();
-            var rnd = new Random();
-            test.Add(new Test {Id=null,Text=$"Hello {User.Identity.Name}, IsAuthenticated={User.Identity.IsAuthenticated}, AuthenticationType={User.Identity.AuthenticationType}" });
-            for (var i = 0; i <= 10; i++)
+            try
             {
-                var temp = rnd.Next(i);
-                test.Add(new Test { Id = i, Text = $"{DateTime.UtcNow.AddDays(temp).AddHours(temp).AddSeconds(temp).AddMonths(temp).ToString()}" });
+                var test = new List<Test>();
+                var rnd = new Random();
+                test.Add(new Test { Id = null, Text = $"Hello {User.Identity.Name}, IsAuthenticated={User.Identity.IsAuthenticated}" });
+                for (var i = 0; i <= 10; i++)
+                {
+                    var temp = rnd.Next(i);
+                    test.Add(new Test { Id = i, Text = $"{DateTime.UtcNow.AddDays(temp).AddHours(temp).AddSeconds(temp).AddMonths(temp).ToString()}" });
+                }
+                return Json(test);
             }
-            return Json(test);
+            catch (Exception ex)
+            {
+                return Json(ex);
+            }
+
         }
     }
 }

@@ -7,25 +7,25 @@ let CONTACTS = [
         id: 1,
         name: 'Oleg',
         phone: '+79216523442',
-        imageULR: 'http://zagony.ru/grabber/pic/1198063130_1.jpg'
+        imageULR: 'http://alfa/my/User%20Photos/Profile%20Pictures/u_021l6_MThumb.jpg'
     },
     {
         id: 2,
-        name: 'Sergey',
+        name: 'Roma',
         phone: '+7922142432344',
-        imageULR: 'https://imgfave.azureedge.net/image_cache/1281817979640276.jpeg'
+        imageULR: 'http://alfa/my/User%20Photos/Profile%20Pictures/u_m0mus_MThumb.jpg'
     },
     {
         id: 3,
-        name: 'Dima',
+        name: 'Sasha',
         phone: '+7923244244321',
-        imageULR: 'https://pbs.twimg.com/media/Bits2jTIMAAgfGQ.jpg'
+        imageULR: 'http://alfa/my/User%20Photos/Profile%20Pictures/u_m0rjq_MThumb.jpg'
     },
     {
         id: 4,
         name: 'Vika',
         phone: '+793222423421',
-        imageULR: 'http://cdn.fishki.net/upload/post/201411/10/1326593/42_059.jpg'
+        imageULR: 'http://alfa/my/User%20Photos/Profile%20Pictures/u_m0vjd_MThumb.jpg'
     },
 ]
 

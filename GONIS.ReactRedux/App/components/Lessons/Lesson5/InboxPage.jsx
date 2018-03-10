@@ -2,7 +2,7 @@
 import Helmet from 'react-helmet';
 import MessagePreview from './MessagePreview.jsx';
 import Message from './Message.jsx';
-import messages from './messages.json';
+import messages from './messages.jsx';
 import { Switch, Route } from 'react-router-dom';
 import './InboxPage.css';
 

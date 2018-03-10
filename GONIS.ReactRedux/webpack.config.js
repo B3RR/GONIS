@@ -1,10 +1,9 @@
 ﻿{
-    // Need for output path
-    let path = require('path');
-
-    // Plugin for clear folder 
-    const CleanWebpackPlugin = require('clean-webpack-plugin');
+    const webpack = require('webpack');
+    const path = require('path');
     const bundleFolder = "wwwroot/bundle/";
+    // Plugin for clear folder 
+    const cleanWebpackPlugin = require('clean-webpack-plugin');
 
     module.exports = {
         
@@ -21,7 +20,8 @@
                 exclude: /node_modules/,
                 loader: "babel-loader",
                 query: {
-                    presets: ['env', 'react']
+                    presets: ['env', 'react'],
+                    plugins: ['transform-object-rest-spread']
                 }
             },
             { test: /\.css$/, loader: "style-loader!css-loader" },
@@ -29,7 +29,11 @@
             ]
         },
         plugins: [
-            new CleanWebpackPlugin([bundleFolder])
+            new cleanWebpackPlugin([bundleFolder]),
+            new webpack.ProvidePlugin({
+                React: 'react'
+            }),
         ]
+
     };
 }

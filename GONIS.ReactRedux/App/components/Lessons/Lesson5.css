@@ -3,7 +3,8 @@
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #333333;
+    background-color: rgb(34, 42, 50);
+    width: 950px;
 }
 
 .l5-menu li {

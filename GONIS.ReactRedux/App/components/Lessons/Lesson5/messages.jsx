@@ -1,4 +1,4 @@
-﻿[
+﻿const messages =()=>[
   {
     "id": "sdfd45asd",
     "subject": "Hi there! How are you?",
@@ -63,3 +63,4 @@
     "body": "Suspendisse eu ligula. Duis lobortis massa imperdiet quam. Proin magna. Fusce fermentum. Mauris sollicitudin fermentum libero.Suspendisse eu ligula. Duis lobortis massa imperdiet quam. Proin magna. Fusce fermentum. Mauris sollicitudin fermentum libero."
   }
 ]
+export default messages;

@@ -1,6 +1,6 @@
 ﻿import React from 'react';
 import Helmet from 'react-helmet';
-import messages from './messages.json';
+import messages from './messages.jsx';
 
 export default class Message extends React.Component {
     constructor(props) {

@@ -26,7 +26,7 @@ export default class Lesson2 extends React.Component {
 
     render() {
         return (
-            <div><Helmet title="Lesson 2 - Timer" />{this.state.seconds} seconds</div>
+            <div><Helmet title="Lesson 2 - Timer" />{this.state.seconds.toString()} seconds</div>
             );
     }
 }
