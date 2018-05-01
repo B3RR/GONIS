@@ -24,7 +24,7 @@ namespace GONIS.Core.Helper
             {
                 return true;
             }
-            if (value.Equals("n")||value.Equals("no"))
+            else if (value.Equals("n")||value.Equals("no"))
             {
                 return false;
             }
